@@ -15,7 +15,7 @@ const app = express();
 // Middleware setup
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000',  // Allow requests from frontend URL
+  origin: 'https://event-app-u8fw.onrender.com',  // Allow requests from frontend URL
   credentials: true,  // Allow cookies and authorization headers
 }));
 
