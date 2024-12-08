@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Online Event Management Platform - Frontend Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+This is the frontend application for the Online Event Management Platform, built with React and styled using TailwindCSS. It allows users to view events, register, log in, purchase tickets, and access dashboards.
 
-In the project directory, you can run:
+Project Structure
+plaintext
+Copy code
+frontend/
+├── public/
+│   ├── index.html               # Main HTML file for the app
+│   ├── assets/                  # Static assets (images, icons, etc.)
+│   └── favicon.ico              # Favicon for the site
+├── src/
+│   ├── components/              # Reusable components
+│   │   ├── Navbar.js            # Navbar component
+│   │   ├── Footer.js            # Footer component
+│   │   ├── EventCard.js         # Event card for listing events
+│   │   ├── PaymentForm.js       # Payment form component
+│   │   └── RegistrationForm.js  # Registration form for users
+│   ├── pages/                   # Pages for routing
+│   │   ├── Home.js              # Home page
+│   │   ├── EventDetail.js       # Event detail page
+│   │   ├── Dashboard.js         # Dashboard for users/admins
+│   │   ├── AdminPanel.js        # Admin panel for managing events
+│   │   ├── Login.js             # Login page
+│   │   └── Checkout.js          # Checkout page for purchasing tickets
+│   ├── services/                # API service functions (axios calls)
+│   │   ├── api.js               # API functions for communicating with backend
+│   │   └── auth.js              # Authentication API functions
+│   ├── App.js                   # Main React App component
+│   ├── index.js                 # Entry point of the React app
+│   ├── tailwind.config.js       # TailwindCSS configuration
+│   └── .env                     # Environment variables (API URL, etc.)
+├── package.json                 # Frontend dependencies and scripts
+├── package-lock.json            # Lock file for exact dependencies
+└── README.md                    # Documentation file (this file)
 
-### `npm start`
+Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Home Page:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Displays a list of upcoming events.
+Fetches data from the backend via API (GET /api/events).
+Event Details Page:
 
-### `npm test`
+Shows detailed information about a selected event.
+User Authentication:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Registration (POST /api/users/register) and login (POST /api/users/login).
+Dashboard:
 
-### `npm run build`
+Allows users to view purchased tickets.
+Admins can manage events.
+Payment Integration:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Supports ticket purchases through a payment form.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Key Components
+Navbar (components/Navbar.js): Navigation menu at the top of the app.
+EventCard (components/EventCard.js): Displays event details in a card format.
+RegistrationForm (components/RegistrationForm.js): Handles user registration.
+PaymentForm (components/PaymentForm.js): Handles ticket payment inputs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
