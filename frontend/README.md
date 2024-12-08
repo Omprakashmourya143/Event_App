@@ -58,8 +58,12 @@ Payment Integration:
 Supports ticket purchases through a payment form.
 
 Key Components
+
 Navbar (components/Navbar.js): Navigation menu at the top of the app.
+
 EventCard (components/EventCard.js): Displays event details in a card format.
+
 RegistrationForm (components/RegistrationForm.js): Handles user registration.
+
 PaymentForm (components/PaymentForm.js): Handles ticket payment inputs.
 
